@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -24,6 +25,7 @@ public class App extends Application {
         Label l = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
 //        scene = new Scene(loadFXML("primary"), 640, 480);
         Scene scene = new Scene(new StackPane(l), 640, 480);
+        scene.getStylesheets().add(getClass().getResource("/ext/fabian/style.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }
