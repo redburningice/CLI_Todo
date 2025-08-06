@@ -33,8 +33,7 @@ public class App extends Application {
         ObservableList<String> countries = FXCollections.observableArrayList("germany", "italy", "japan");
         ListView<String> listView = new ListView<>(countries);
 
-//        scene = new Scene(loadFXML("primary"), 640, 480);
-        Scene scene = new Scene(new StackPane(l, listView), 640, 480);
+        scene = new Scene(loadFXML("secondary"), 640, 480);
         scene.getStylesheets().add(getClass().getResource("/ext/fabian/style.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
@@ -44,6 +43,8 @@ public class App extends Application {
         String value = String.valueOf("123");
 
         List<String> hello = List.of("Hello", "1");
+
+
 
     }
 
